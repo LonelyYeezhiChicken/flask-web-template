@@ -5,29 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/nicepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/u-style.css') }}">
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <title>Home</title>
 
-    <style>
-        textarea {
-            font-size: 1rem;
-            width: 30rem;
-            height: 5rem;
-            margin: 2rem;
-        }
 
-        .inpBtn {
-            font-size: 2rem;
-            background-color: rgb(0, 77, 221);
-            color: azure;
-            width: 20rem;
-            height: 5rem;
-            margin-left: 5rem;
-        }
-    </style>
 </head>
 
-<body>
+<body class="u-body u-xl-mode">
+    <section class="u-align-left u-clearfix u-grey-5 u-section-2" id="carousel_6273">
+        <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+            <div class="u-list u-list-1">
+                <div class="u-repeater u-repeater-1">
+                    <div
+                        class="u-align-left u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white u-list-item-1">
+                        <div class="u-container-layout u-similar-container u-container-layout-1">
+                            <h5 class="u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-1">請輸入文字</h5>
+                            <img class="u-border-10 u-border-palette-1-base u-image u-image-circle u-image-1" src=""
+                                alt="" data-image-width="1500" data-image-height="1000">
+                            <h6 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2" id="lang-text">
+                                English</h6>
+                            <textarea class="u-text-grey-40 u-text-3" id="inp" value=""
+                                placeholder="請輸入...."></textarea>
+                            <p class="u-custom-font u-font-montserrat u-text  u-text-4">
+                                <input class="u-input inpBtn" type="button" value="翻譯" onclick="toTranslate()" />
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" u-align-left u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round
+                                    u-white u-list-item-2">
+                        <div class="u-container-layout u-similar-container u-container-layout-2">
+                            <h5 class="u-custom-font u-font-montserrat u-text u-text-palette-1-base u-text-5">翻譯結果</h5>
+                            <img class="u-border-10 u-border-palette-1-base u-image u-image-circle u-image-2" src=""
+                                alt="" data-image-width="1500" data-image-height="1000">
+                            <h6 class="u-custom-font u-font-montserrat u-text u-text-default u-text-6">中文
+                            </h6>
+                            <textarea class="u-text-grey-40 u-text-3" id="out" value=""
+                                placeholder="請輸入...."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- 
     <h1>請輸入要翻譯的文字</h1>
     <div>
         <div>
@@ -39,7 +65,7 @@
         <div>
             <textarea id="out" value="" disabled></textarea>
         </div>
-    </div>
+    </div> -->
     <script>
 
         let url = 'http://127.0.0.1:8000/api/toTranslate'
